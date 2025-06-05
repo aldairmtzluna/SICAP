@@ -11,7 +11,7 @@ app.use(express.json()); // Parsea el body de las peticiones a JSON
 
 // Ruta de prueba
 app.get("/", (req, res) => {
-  res.send("¡Backend funcionando! 🚀");
+  res.send("¡Backend! 🚀");
 });
 
 module.exports = app;
