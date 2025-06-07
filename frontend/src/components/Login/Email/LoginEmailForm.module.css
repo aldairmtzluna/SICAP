@@ -1,0 +1,80 @@
+.form {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #202124;
+  font-size: 0.9375rem;
+}
+
+.input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.75rem;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  font-size: 0.9375rem;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #fddb32;
+  box-shadow: 0 0 0 2px rgba(253, 219, 50, 0.2);
+}
+
+.submitButton {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.75rem;
+  background-color: #fddb32;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.submitButton:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.submitButton:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.submitButton:active {
+  transform: scale(0.98);
+}
+
+.inputError {
+  border-color: #d32f2f !important;
+}
+
+.inputSuccess {
+  border-color: #2e7d32 !important;
+}
+
+.errorMessage {
+  color: #d32f2f;
+  font-size: 0.8125rem;
+  margin-top: 0.25rem;
+}
+
+.successMessage {
+  color: #2e7d32;
+  font-size: 0.8125rem;
+  margin-top: 0.25rem;
+}

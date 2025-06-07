@@ -1,4 +1,3 @@
-// 202406050008_create_documents_table.js
 exports.up = function (knex) {
     return knex.schema.createTable('documents', (table) => {
       table.increments('id').primary();

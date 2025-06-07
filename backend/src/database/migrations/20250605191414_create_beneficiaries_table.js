@@ -1,4 +1,3 @@
-// 202406050005_create_beneficiaries_table.js
 exports.up = function (knex) {
     return knex.schema.createTable('beneficiaries', (table) => {
       table.increments('id').primary();

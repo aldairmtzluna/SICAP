@@ -1,4 +1,3 @@
-// 202406050001_create_partners_table.js
 exports.up = function (knex) {
     return knex.schema.createTable('partners', (table) => {
       table.increments('id').primary();

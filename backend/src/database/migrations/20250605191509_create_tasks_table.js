@@ -1,4 +1,3 @@
-// 202406050007_create_tasks_table.js
 exports.up = function (knex) {
     return knex.schema.createTable('tasks', (table) => {
       table.increments('id').primary();

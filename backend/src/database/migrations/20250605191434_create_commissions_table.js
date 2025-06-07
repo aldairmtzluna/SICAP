@@ -1,4 +1,3 @@
-// 202406050006_create_commissions_table.js
 exports.up = function (knex) {
     return knex.schema.createTable('commissions', (table) => {
       table.increments('id').primary();

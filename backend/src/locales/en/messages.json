@@ -1,0 +1,16 @@
+{
+    "login": {
+      "email": {
+        "success": "Valid email! Proceed with your password.",
+        "error": "Email not registered",
+        "invalid": "Please enter a valid email with domain (e.g. example@domain.com)"
+      },
+      "phone": {
+        "success": "Valid phone number! Proceed with your password.",
+        "error": "Phone number not registered",
+        "invalid": "Phone number must be exactly 10 digits"
+      },
+      "server_error": "Error connecting to server",
+      "required": "This field is required"
+    }
+  }

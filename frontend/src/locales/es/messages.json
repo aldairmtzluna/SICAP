@@ -1,0 +1,16 @@
+{
+    "login": {
+      "email": {
+        "success": "¡Correo electrónico válido! Procede con tu contraseña.",
+        "error": "Correo electrónico no registrado",
+        "invalid": "Por favor ingresa un correo electrónico válido con dominio (ej. example@dominio.com)"
+      },
+      "phone": {
+        "success": "¡Teléfono válido! Procede con tu contraseña.",
+        "error": "Teléfono no registrado",
+        "invalid": "El teléfono debe tener exactamente 10 dígitos"
+      },
+      "server_error": "Error al conectar con el servidor",
+      "required": "Este campo es obligatorio"
+    }
+  }

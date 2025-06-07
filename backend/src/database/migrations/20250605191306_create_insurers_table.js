@@ -1,4 +1,3 @@
-// 202406050002_create_insurers_table.js
 exports.up = function (knex) {
     return knex.schema.createTable('insurers', (table) => {
       table.increments('id').primary();

@@ -1,0 +1,35 @@
+.termsText {
+  font-size: 0.75rem;
+  color: #5f6368;
+  text-align: center;
+  border-top: 1px solid #e1e1e1;
+  padding-top: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.otherOptions {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.otherOptionsButton {
+  background: none;
+  border: none;
+  color: #fddb32;
+  cursor: pointer;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  padding: 0.25rem;
+  transition: all 0.3s ease;
+}
+
+.otherOptionsButton:hover {
+  color: #e6c62d;
+  text-decoration: underline;
+}
+
+.otherOptionsButton:focus {
+  outline: none;
+  text-decoration: underline;
+}

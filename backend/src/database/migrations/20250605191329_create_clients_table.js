@@ -1,4 +1,3 @@
-// 202406050003_create_clients_table.js
 exports.up = function (knex) {
     return knex.schema.createTable('clients', (table) => {
       table.increments('id').primary();
