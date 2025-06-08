@@ -10,6 +10,12 @@
         "error": "Teléfono no registrado",
         "invalid": "El teléfono debe tener exactamente 10 dígitos"
       },
+      "code": {
+        "success": "Código de verificación valido",
+        "warning": "El código debe tener exactamente 8 dígitos",
+        "error": "El código que ingresaste es incorrecto",
+        "invalid": "El código de verificación debe ser numerico"
+      },
       "server_error": "Error al conectar con el servidor",
       "required": "Este campo es obligatorio"
     }

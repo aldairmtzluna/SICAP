@@ -1,0 +1,8 @@
+{
+    "login": {
+      "email": {
+        "data": "Correo o teléfono.",
+        "verify": "Código de 8 dígitos."
+      }
+    }
+  }

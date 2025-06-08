@@ -1,4 +1,7 @@
 import styles from './SocialLoginEmail.module.css';
+import Button from '../../Elements/Buttons/Button';
+import IconGoogle from '../../Elements/Images/IconGoogle';
+import buttons from '../../../locales/es/buttons.json';
 
 const SocialLogin = () => {
   const handleGoogleLogin = () => {
@@ -7,14 +10,13 @@ const SocialLogin = () => {
 
   return (
     <>
-      <button 
+      <Button
         onClick={handleGoogleLogin}
         className={styles.googleButton}
       >
-        <span className={styles.googleIcon}>G</span>
-        Iniciar sesión con Google
-      </button>
-      
+        <IconGoogle />
+        {buttons.login.email.google}
+      </Button>
       <div className={styles.separator}>
         <div className={styles.separatorLine}></div>
         <span className={styles.separatorText}>O</span>

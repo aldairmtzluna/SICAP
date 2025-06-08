@@ -1,0 +1,6 @@
+.checkboxCard {
+    display: flex;
+    align-items: flex-start;
+    background: #f8fafc;
+    border-radius: 8px;
+  }

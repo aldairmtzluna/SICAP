@@ -1,0 +1,14 @@
+.subtitle {
+    color: #5f6368;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    font-size: 0.9375rem;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {    
+    .subtitle {
+      font-size: 0.875rem;
+      margin-bottom: 1.5rem;
+    }
+  }

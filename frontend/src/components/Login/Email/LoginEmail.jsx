@@ -1,17 +1,22 @@
 import { useState, useEffect } from 'react';
-import styles from './LoginEmail.module.css';
+import { useNavigate } from 'react-router-dom';
 import SocialLogin from './SocialLoginEmail';
 import LoginForm from './LoginEmailForm';
 import TermsAndConditions from './TermsAndConditions';
-import logo from '../../../assets/logo_sicap.png'; 
 import { BASE_URL } from '../../../config/config';
 import esMessages from '../../../locales/es/messages.json';
 import enMessages from '../../../locales/en/messages.json';
 import SuccessAlert from '../../Alerts/SuccessAlert';
 import ErrorAlert from '../../Alerts/ErrorAlert';
 import WarningAlert from '../../Alerts/WarningAlert';
+import Title from '../../Elements/Texts/Title';
+import Subtitle from '../../Elements/Texts/Subtitle';
+import Logo from '../../Elements/Images/Logo';
+import AuthCard from '../../Elements/Cards/AuthCard';
+import texts from '../../../locales/es/texts.json';
 
-const Login = () => {
+const LoginEmail = () => {
+  const navigate = useNavigate();
   const [language, setLanguage] = useState('es');
   const messages = language === 'es' ? esMessages : enMessages;
 
@@ -23,12 +28,24 @@ const Login = () => {
   const [showAlert, setShowAlert] = useState(false);
   const [alertType, setAlertType] = useState(null);
 
+  // Redirección si ya hay sesión
+  useEffect(() => {
+    if (sessionStorage.getItem('userIdentifier')) {
+      navigate('/login/verify');
+    }
+  }, [navigate]);
+
   useEffect(() => {
     let timeoutId;
     
-    if (showAlert) {
+    if (showAlert && alertType === 'success') {
       document.body.classList.add('alert-open');
-      // Configura el temporizador para cerrar automáticamente después de 5 segundos
+      timeoutId = setTimeout(() => {
+        closeAlert();
+        navigate('/login/verify');
+      }, 5000);
+    } else if (showAlert) {
+      document.body.classList.add('alert-open');
       timeoutId = setTimeout(() => {
         closeAlert();
       }, 5000);
@@ -36,11 +53,10 @@ const Login = () => {
       document.body.classList.remove('alert-open');
     }
 
-    // Limpieza del temporizador al desmontar o cuando showAlert cambie
     return () => {
       if (timeoutId) clearTimeout(timeoutId);
     };
-  }, [showAlert]);
+  }, [showAlert, alertType, navigate]);
 
   const detectAndValidateInput = (value) => {
     if (value.includes('@')) {
@@ -106,6 +122,10 @@ const Login = () => {
             : messages.login.phone.success
         );
         setShowAlert(true);
+        
+        // Guardar el identificador en sessionStorage
+        sessionStorage.setItem('userIdentifier', identifier);
+        sessionStorage.setItem('inputType', type);
       } else {
         setIsValid(false);
         setAlertType('error');
@@ -135,13 +155,12 @@ const Login = () => {
 
   return (
     <>
-      <div className={styles.loginContainer}>
-        <img src={logo} alt="SICAP Logo" className={styles.logo} />
-        
-        <h2 className={styles.title}>Inicia sesión o crea una cuenta</h2>
-        <p className={styles.subtitle}>
-          Accede a SIstema de Control y Administración de Pólizas.
-        </p>
+      <AuthCard>
+        <Logo />        
+        <Title text={texts.login.email.login} />
+        <Subtitle 
+          text={texts.login.email.access} 
+        />
         
         <SocialLogin />
         <LoginForm 
@@ -154,7 +173,7 @@ const Login = () => {
           messages={messages}
         />
         <TermsAndConditions />
-      </div>
+      </AuthCard>
 
       {showAlert && alertType === 'success' && (
         <SuccessAlert message={errorMessage} onClose={closeAlert} />
@@ -169,4 +188,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginEmail;

@@ -1,0 +1,8 @@
+.bodyText {
+  font-size: 0.75rem;
+  color: #5f6368;
+  text-align: center;
+  border-top: 1px solid #e1e1e1;
+  padding-top: 1.25rem;
+  line-height: 1.5;
+}

@@ -1,0 +1,11 @@
+{
+    "login": {
+      "email": {
+        "google": "Iniciar sesión con google.",
+        "valid": "Validando...",
+        "form": "Continuar",
+        "other": "Otras opciones de inicio de sesión.",
+        "password": "Ingresa tu contraseña."
+      }
+    }
+  }

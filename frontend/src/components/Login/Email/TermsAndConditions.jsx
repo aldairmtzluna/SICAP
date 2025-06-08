@@ -1,18 +1,19 @@
-import styles from './TermsAndConditions.module.css';
+import ContainerCard from '../../Elements/Cards/ContainerCard';
+import Link from '../../Elements/Buttons/Link';
+import BodyText from '../../Elements/Texts/BodyText';
+import texts from '../../../locales/es/texts.json';
+import buttons from '../../../locales/es/buttons.json';
 
 const TermsAndConditions = () => {
   return (
     <>
-      <p className={styles.termsText}>
-        Al continuar, declaras que leíste y aceptas nuestros Términos y condiciones, 
-        el Aviso de privacidad, y los Términos y condiciones de SICAP
-      </p>
+      <BodyText
+        text={texts.login.email.terms}
+      />
       
-      <div className={styles.otherOptions}>
-        <button className={styles.otherOptionsButton}>
-          Otras opciones de inicio de sesión
-        </button>
-      </div>
+      <ContainerCard>
+        <Link text={buttons.login.email.other} />
+      </ContainerCard>
     </>
   );
 };

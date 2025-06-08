@@ -1,0 +1,17 @@
+{
+  "login": {
+    "email": {
+      "login": "Inicia sesión o crea una cuenta",
+      "access": "Accede a Sistema de Control y Administración de Pólizas.",
+      "confirm": "Confirma tu correo.",
+      "code": "Ingresa el código de seguridad que enviamos a {email}. Si no lo ves en tu bandeja, consulta en correos no deseados.",
+      "signed-In": "Mantener la sesión abierta.",
+      "terms": "Al continuar, declaras que leíste y aceptas nuestros Términos y condiciones, el Aviso de privacidad, y los Términos y condiciones de SICAP.",
+      "security": "Esta opción es solo para dispositivos personales. Para proteger tu cuenta, no la selecciones si estás en un dispositivo compartido."
+    },
+    "phone": {
+      "confirm": "Confirma tu teléfono.",
+      "code": "Ingresa el código de seguridad que enviamos a {phone}."
+     }
+  }
+}

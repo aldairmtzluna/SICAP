@@ -1,0 +1,13 @@
+.title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #202124;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  @media (max-width: 768px) {    
+    .title {
+      font-size: 1.1rem;
+    }
+  }
